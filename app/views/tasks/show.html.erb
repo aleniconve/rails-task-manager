@@ -1,0 +1,13 @@
+<h1><%= @task.details %></h1>
+<div>
+<%= link_to "✏️Edit this task", edit_path%>
+</div>
+
+<div>
+<%= link_to "⏎Go back to index", tasks_path%>
+</div>
+
+<%= link_to "🗑",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
